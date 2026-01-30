@@ -1,6 +1,6 @@
 # MedVaani: Offline-First Voice Assistant for Healthcare
 
-MedVaani is an AI-powered field assistant that automates data entry for ASHA (Accredited Social Health Activist) workers in rural India. Users can record patient data via voice notes in English, Hindi, or Odia. The system transcribes, extracts, and stores structured data in a local database—no internet required for processing.
+MedVaani is an AI-powered field assistant that automates data entry for  Health Activist workers in rural India. Users can record patient data via voice notes . The system transcribes, extracts, and stores structured data in a local database—no internet required for processing.
 
 ---
 
@@ -8,7 +8,7 @@ MedVaani is an AI-powered field assistant that automates data entry for ASHA (Ac
 
 **Key Features:**
 - Offline-first: All AI runs locally for privacy and zero data cost.
-- Multilingual: Transcribes and translates Hindi/Odia voice notes to English records.
+- Multilingual: Transcribes and translates voice notes to English records.
 - Batch mode: Process multiple patients in a single voice note.
 - Structured output: Converts unstructured speech to a normalized SQL database.
 
@@ -71,7 +71,7 @@ MedVaani is an AI-powered field assistant that automates data entry for ASHA (Ac
 ---
 
 ## Usage
-- Send a voice note to your Telegram bot (English, Hindi, or Odia).
+- Send a voice note to your Telegram bot .
 - The bot transcribes, extracts, and stores patient data locally.
 - Batch mode: Mention multiple patients in one note (e.g., "First patient is... Second patient is...").
 - The bot replies with a structured field report and saves all records to SQLite.
@@ -85,4 +85,3 @@ MedVaani is an AI-powered field assistant that automates data entry for ASHA (Ac
 
 ---
 
-For questions or contributions, please open an issue or pull request.
