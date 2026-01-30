@@ -14,29 +14,6 @@ MedVaani is an AI-powered field assistant that automates data entry for ASHA (Ac
 
 ---
 
-## Architecture Diagram
-
-> **How to view:**
-> - Use VS Code with the "Markdown Preview Mermaid Support" extension, or
-> - Paste this code into https://mermaid.live/
-
-```mermaid
-graph TD
-    A[User (ASHA Worker)] -->|Sends Voice Note| B[Telegram Bot Interface]
-    B -->|Downloads .ogg File| C[Local Server / Edge Device]
-    subgraph "Processing Pipeline"
-        C -->|Raw Audio| D[OpenAI Whisper]
-        D -->|Transcribed Text| E[Meta Llama 3.2]
-        subgraph "AI Logic"
-            E -->|Extraction Prompt| F{Entity Recognition}
-            F -->|JSON Structure| G[Patient Name, Age, BP, Symptoms]
-        end
-    end
-    G -->|Store Data| H[(SQLite Database)]
-    G -->|Generate Report| I[PDF Generator]
-    H -->|Confirmation| B
-    I -->|Digital Referral Card| B
-```
 
 ---
 
