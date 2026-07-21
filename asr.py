@@ -11,6 +11,7 @@ class ASREngine:
 class WhisperEngine(ASREngine):
     def __init__(self, model_name: str, language: str | None = None):
         import whisper
+        self.model = whisper.load_model("base")
         logger.info("Loading Whisper model %r...", model_name)
         self.language = language
 
@@ -18,5 +19,6 @@ class WhisperEngine(ASREngine):
         options = {}
         if self.language:
             options["language"] = self.language
-        result = whisper.transcribe(audio_path, **options)
+
+        result = self.model.transcribe(audio_path, **options)
         return result["text"].strip()

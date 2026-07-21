@@ -4,7 +4,7 @@ import re
 import ollama
 import config
 
-logger - logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
 SEGMENT_PROMPT = """You are given a transcript in which a community health worker
 describes one or more patients, possibly in Hindi, English, or a mix.
 
